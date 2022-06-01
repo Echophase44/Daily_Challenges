@@ -1,5 +1,6 @@
 function removeSmallest(numbers) {
-  rating = 6;
+  new_array = [...numbers];
+  rating = 1000;
   location = 0;
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] < rating) {
@@ -7,8 +8,8 @@ function removeSmallest(numbers) {
       location = i;
     }
   }
-  numbers.splice(location, 1);
-  return numbers;
+  new_array.splice(location, 1);
+  return new_array;
 }
 
 removeSmallest([1, 2, 3, 4, 5]);
