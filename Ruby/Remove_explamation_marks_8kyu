@@ -1,0 +1,21 @@
+def remove_exclamation_marks(s)
+  a = s.split("")
+  toggle = true
+  b = 0
+  while toggle
+    a.each_with_index do |element, index|
+      if element == "!"
+        a.delete_at(index)
+      end
+    end
+
+    if a.length == b
+      toggle = false
+    end
+    b = a.length
+  end
+  
+  p a.join("")
+end
+
+remove_exclamation_marks("Hello World!!!")
